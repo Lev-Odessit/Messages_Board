@@ -1,49 +1,95 @@
+body {
+
+}
+
 .wrapper {
 
 }
 
 header {
-	height:80px;
-	width:100%;
-	background-image:url(../images/header.png);
-	background-repeat:repeat-x;
-	padding-top:20px;
 
 }
-	header h1.site_logo {
-		display: inline;
+	header .top {
+		background: url('../images/authentication-top-bg.png') repeat-x;
+		height: 34px;
 	}
-
-		header h1.site_logo a:hover {
+		header .top .authentication {
+			line-height: 34px;
+			color: white;
+			text-align: right;
+			font-family: Arial,sans-serif;
+		}
+			header .authentication a {
+				margin:10px;
+				color: white;
+				text-decoration: none;
+			}
+				header .authentication a:hover {
+					text-decoration: underline;
+				}
+	header .bottom {
+		background: url('../images/authentication-bottom-bg.png') repeat-x;
+		padding: 5px 10px 15px;
+	}
+		header .bottom a.site_logo {
+			display: block;
+			float: left;
+			font-size: 30px;
+			color: white;
 			text-decoration: none;
+			font-family: Arial,sans-serif;
+			text-align: center;
 		}
-
-	header .authentication {
-		float:right;
-		line-height: 40px;
-	}
-
-		header .authentication .user_name {
-			color: #4e4e5f;
+		header .bottom .header_search {
+			display: inline-block;
+			line-height: 51px;
+			text-align: center;
 		}
-
-		header .authentication a {
-			margin:10px;
-		}
-
-nav {
-	border-top:3px solid #c0c0c0;
-	background:url(../images/menu.png) repeat-x;
-	height: 50px;
-}
-
-	nav a {
+			header .bottom .search_field {
+				display: inline-block;
+				padding: 6px 10px;
+				border-radius: 3px;
+				outline: none;
+				border: 0;
+			}
+			header .bottom .header_search .header_search_btn {
+				border: 1px solid white;
+				text-align: center;
+				background: transparent;
+				color: white;
+				outline: none;
+				margin: 0 0 0 10px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+	header .bottom .add_post {
+		border: 1px solid white;
+		color: white;
+		display: block;
+		padding: 5px 10px;
+		text-decoration: none;
+		text-align: center;
 		float: right;
-		line-height: 47px;
-		padding: 0 15px;
+		font-family: Arial,sans-serif;
 	}
-
-
+nav {
+	margin: -10px 0 0 0;
+	text-align: left;
+	background: white;
+	border:1px solid #ccc;
+}
+	nav a {
+		padding: 15px;
+		text-decoration: none;
+		color: black;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		display: inline-block;
+	}
+	nav a:hover {
+		background: #cf2f31;
+		color: white;
+	}
 main {
 
 }
@@ -191,6 +237,18 @@ div.new_cat {
 	padding: 10px;
 	margin-left: 10px;
 	margin-bottom: 20px;
+}
+
+@media (max-width: 1170px) {
+
+}
+
+@media (max-width: 	970px) {
+
+}
+
+@media (max-width: 	750px) {
+
 }
 
 /* JQuery stylesheets */
