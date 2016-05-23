@@ -1,16 +1,37 @@
-<nav class="container_12">
-	<a href="/">Главная</a>
-	<a href="/">Категории</a>
+<ul class="nav container_12">
+    <li>
+	    <a href="/">Главная</a>
+    </li><!--
+ --><li class="sub_menu_link">
+        <a href="javascript:void(0)" class="nav_categories">
+            Категории
+        </a>
+        <ul class="sub_menu">
+            <?php if(is_array($categories)):?>
+                <?php foreach($categories as $key=>$value):?>
+                    <?php if($value['next']) :?>
+                        <ul>
+                            <?php foreach($value['next'] as $k=>$v):?>
+                                <li><a href="?action=categories&id_cat=<?=$k?>"><?=$v;?></a></li>
+                            <?php endforeach;?>
+                        </ul>
+                    <?php endif;?>
+                <?php endforeach;?>
+            <?php endif;?>
+        </ul>
+    </li><!--
 	<? if($user) :?>
-<!--		--><?//if($add_mess):?>
-		<!--			<a href="?action=add_mess">Добавить объявление</a>-->
-		<!--		--><?// endif;?>
-		<a href="?action=p_mess">Ваши объявления</a>
+     --><li>
+		    <a href="?action=p_mess">Ваши объявления</a>
+        </li><!--
 	<? endif;?>
 	<? if($razd && is_array($razd)) :?>
 		<? foreach($razd as $item) :?>
-			<a href="?action=<?= $m_action; ?>&amp;id_r=<?= $item['id']; ?>&id_cat=<?= $id_cat; ?>"><?= $item['name']; ?></a>
+         --><li>
+			    <a href="?action=<?= $m_action; ?>&amp;id_r=<?= $item['id']; ?>&id_cat=<?= $id_cat; ?>"><?= $item['name']; ?></a>
+            </li><!--
 		<? endforeach;?>
 	<? endif;?>
-</nav>
+	-->
+</ul>
 <div class="clearfix"></div>
