@@ -1,8 +1,8 @@
-<h3 class="title_page">Результаты поиска!!!</h3>
+<h3 class="title_page container_12">Результаты поиска!!!</h3>
 <?php if ( $name_razd ) : ?>
     <strong>Раздел: </strong><?= $name_razd; ?>
 <?php endif; ?>
-<?php if ($text) : ?>
+<?php if (!is_string($text) && !is_bool($text)) : ?>
     <?php foreach ( $text as $item ) : ?>
         <div class="t_mess">
             <h4 class="title_p_mess">

@@ -29,12 +29,12 @@ if ( $_GET ) {
 		$text = small_text($text);
 	}
 	else {
-		if ( $text != FALSE ) {
-			$_SESSION['msg'] = '<div class="alert alert-danger" role="alert">Ничего не найдено</div>';
+		if ( is_bool($text) ) {
+			$_SESSION['msg'] = '<div class="alert alert-danger container_12" role="alert">Ничего не найдено</div>';
 		}
 		else {
-			$msg = "Ничего не найдено";
-			$_SESSION['msg'] = '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
+			$msg = "Нет поискового запроса";
+			$_SESSION['msg'] = '<div class="alert alert-danger container_12" role="alert">'.$msg.'</div>';
 		}
 	}
 

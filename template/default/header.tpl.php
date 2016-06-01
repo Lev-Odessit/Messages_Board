@@ -8,13 +8,19 @@
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/reset.css">
     <!-- Grid System Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/960.css">
-    <!-- Custom stylesheets -->
+    <!-- Font Awesome Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/font-awesome.css">
+    <!-- Slick Slyder Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>slick/slick-theme.css">
+    <!-- Custom Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/custom.css">
     <!-- Latest compiled and minified JQuery -->
-    <script   src="https://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <!--  Slick Slider script  -->
+    <script type="text/javascript" src="<?=TEMPLATE;?>slick/slick.min.js"></script>
     <!-- Main JS script -->
     <script src="<?=TEMPLATE;?>scripts/main.js"></script>
-
 </head>
 <body>
     <header>
@@ -40,7 +46,7 @@
                     <input class="header_search_btn" type="submit" value="Поиск">
                 </form>
                 <?php if($user) : ?>
-                    <a href="#" class="add_post grid_2">
+                    <a href="?action=add_mess" class="add_post grid_2">
                         <span>Добавить объявление</span>
                     </a>
                 <?php endif; ?>

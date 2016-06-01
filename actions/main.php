@@ -38,10 +38,11 @@
 	}
 
 	$content = render(TEMPLATE."main.tpl",array(
-										"text" 		 => $text,
-										"navigation" => $navigation,
-										"id_r" 		 =>	$id_r,
-										"name_razd"	 => $name_razd
+										"text" 		 	=> $text,
+										'categories'    => $categories,
+										"navigation" 	=> $navigation,
+										"id_r" 		 	=>	$id_r,
+										"name_razd"	 	=> $name_razd
 										));
 
 ?>

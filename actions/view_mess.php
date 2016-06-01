@@ -22,7 +22,6 @@
     $content = render(TEMPLATE."view_mess.tpl",array(
     										'text' => $text,
     										'img_s' => $img_s
-    										)
-    				);
+    										));
 
 ?>

@@ -1,6 +1,6 @@
 <ul class="nav container_12">
     <li>
-	    <a href="/">Главная</a>
+	    <a href="<?=SITE_NAME;?>">Главная</a>
     </li><!--
  --><li class="sub_menu_link">
         <a href="javascript:void(0)" class="nav_categories">
@@ -34,4 +34,3 @@
 	<? endif;?>
 	-->
 </ul>
-<div class="clearfix"></div>

@@ -47,11 +47,11 @@
 			<label for="add_mess_main_img">Основное изображение*:</label>
 			<input type='file' name='img'>
 		</div>
-		<div class="form-group">
-			<label>Дополнительные изображения:</label>
-			<input type='file' name='img'> <br>
-			<input type='file' name='img'>
-		</div>
+<!--		<div class="form-group">-->
+<!--			<label>Дополнительные изображения:</label>-->
+<!--			<input type='file' name='img'> <br>-->
+<!--			<input type='file' name='img'>-->
+<!--		</div>-->
 		<div class="form-group">
 			<label for="add_mess_id_categories">Период актуальности объявления*:</label> <br>
 			<select id="add_mess_id_categories" name="time">

@@ -1283,10 +1283,6 @@
     	$p_min = (int)clear_str($get['p_min']);
     	$p_max = (int)clear_str($get['p_max']);
 
-    	if ( !$search && !$search_town && !$id_categories && !$id_razd && !$p_max && !$p_min ) {
-    		return "Нет поискового запроса";
-    	}
-
     	$start = ($page-1)*$perpage;
 
     	$sql = "SELECT
@@ -1306,13 +1302,20 @@
                 LEFT JOIN ".PREF."razd ON ".PREF."razd.id = ".PREF."post.id_razd
                 WHERE ".PREF."post.confirm ='1' AND ".PREF."post.is_actual='1'";
 
+
+
 		if ( $search ) {
+
 			if ( mb_strlen($search,'UTF-8') < 4 ) {
 				return "Поисковый запрос должен быть более четырёх символов";
 			}
 
 			$sql .= " AND title LIKE '%$search%'";
 		}
+
+        if ( !$search && !$search_town && !$id_categories && !$id_razd && !$p_max && !$p_min ) {
+            return "Нет поискового запроса";
+        }
 
 		if ( $id_categories ) {
 			$sql .= " AND id_categories='$id_categories'";

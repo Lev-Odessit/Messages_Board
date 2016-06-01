@@ -8,10 +8,10 @@
         <h4 class="title_p_mess">
             <a href="?action=view_mess&id=<?=$text['id'];?>"><?=$text['title'];?></a>
         </h4>
-        <?php if ($text['confirm'] == 0) : ?>
+        <?php if ( $text['confirm'] == 0 ) : ?>
             <p class="no_confirm"><strong>Ещё не подтвержденно модератором</strong></p>
         <?php endif; ?>
-        <?php if ($text['is_actual'] == 0) : ?>
+        <?php if ( $text['is_actual'] == 0 ) : ?>
             <p class="no_actual"><strong>Уже не актуально</strong></p>
         <?php endif; ?>
         <p class="p_mess_cat">
@@ -28,12 +28,6 @@
             <img class="mini_mess" src="<?=SITE_NAME."/".MINI.$text['img'];?>">
             <?=nl2br($text['text']);?>
         </p>
-
-        <?php if ( $img_s && is_array($img_s) ) :?>
-            <?php foreach ($img_s as $item ) : ?>
-                <img src="<?=SITE_NAME."/".MINI.$item; ?>">
-            <?php endforeach; ?>
-        <?php endif; ?>
 </div>
 <?php endif; ?>
 
