@@ -1,16 +1,17 @@
-<?php if($_SESSION['msg']) : ?>
-    <?= $_SESSION['msg']; ?>
-    <?php unset($_SESSION['msg']);?>
+<div class="container_12">
+    <?php if($_SESSION['msg']) : ?>
+        <div class="general_msg">
+            <?= $_SESSION['msg']; ?>
+            <?php unset($_SESSION['msg']);?>
+        </div>
+    <?php endif; ?>
+</div>
+<?php if ( $name_razd ) : ?>
+    <div class="container_12">
+        <h3 class="title_page">Объявления</h3>
+        <strong>Раздел: </strong><?= $name_razd; ?>
+    </div>
 <?php endif; ?>
-
-<?php if ( !$name_razd ) : ?>
-    <h3 class="title_page">Объявления</h3>
-<?php else : ?>
-    <h3 class="title_page">Объявления</h3>
-    <strong>Раздел: </strong><?= $name_razd; ?>
-<?php endif; ?>
-
-
 <?php if ($text) : ?>
     <section class="slider container_12">
         <div class="carosel_header">
@@ -28,7 +29,7 @@
                             <img class="mini_mess" src="<?=SITE_NAME."/".MINI.$item['img'];?>">
                             <div class="clear"></div>
                             <div class="post_title"><?=$item['title'];?></div>
-                            <div class="post_day_of_add"><b>Дата добавления:</b> <?=date("d.m.Y",$item['date']);?></div>
+                            <div class="post_day_of_add"><b>Дата добавления:</b><span><?=date("d.m.Y",$item['date']);?></span></div>
                         </a>
                     </li>
                 <?php endforeach; ?>

@@ -29,7 +29,7 @@ if ($_POST) {
     elseif ($_POST['confirm_user']) {
         $id_user = (int)$_POST['confirm_u'];
 
-        $msg = confirm_user($id_user);
+        $msg = confirm_users($id_user);
 
         if ( $msg === TRUE ) {
             $_SESSION['msg'] = "Users is confirm";

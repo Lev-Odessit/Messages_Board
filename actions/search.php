@@ -13,7 +13,9 @@ if ( $_GET ) {
 	}
 
 	$count_mess = count_s_mess($_GET);
+    
 	$text = get_search($_GET,$page,PERPAGE);
+	
 	$navigation = get_navigation($page,$count_mess,PERPAGE);
 
 	$url = "";
@@ -30,11 +32,12 @@ if ( $_GET ) {
 	}
 	else {
 		if ( is_bool($text) ) {
-			$_SESSION['msg'] = '<div class="alert alert-danger container_12" role="alert">Ничего не найдено</div>';
+			$msg = 'Ничего не найдено';
+			$_SESSION['msg'] = '<div class="green">'.$msg.'</div>';
 		}
 		else {
 			$msg = "Нет поискового запроса";
-			$_SESSION['msg'] = '<div class="alert alert-danger container_12" role="alert">'.$msg.'</div>';
+			$_SESSION['msg'] = '<div class="red">'.$msg.'</div>';
 		}
 	}
 

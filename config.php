@@ -11,9 +11,9 @@ define("TEMPLATE",'template/default/');
 define("ACTIONS",'actions/');
 define("FILES",'files/');
 define("MINI",'files/mini/');
-define("IMG_WIDTH", 200);
+define("IMG_WIDTH", 250);
 
-define("PERPAGE", 2);
+define("PERPAGE", 6);
 define("C_LINKS", 3);
 
 define("SITE_NAME_HEADER",'Доска объявлений');

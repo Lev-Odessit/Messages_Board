@@ -1,26 +1,23 @@
 $(function(){
 
-    var $navLinkWithCategories = $('.nav_categories'),
-        $navCategoriesSubMenu = $('.sub-menu');
-
-    $navLinkWithCategories.on('mouseenter', function(){
-        $(this).addClass('active');
-    });
-
-    $('body').on('mouseenter',function(){
-        $navLinkWithCategories.removeClass('active');
-    });
-
+    // Carousel script
     var nextPostBtn = $('.next'),
         prevPostBtn = $('.prev');
 
-    // Carousel script
-    $(".carosel_body").slick({
+    $(".carosel_posts").slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
         nextArrow: nextPostBtn,
-        prevArrow: prevPostBtn
+        prevArrow: prevPostBtn,
+        autoplay: true,
+        speed: 1000
     });
+
+    // Hide General Msg
+    setTimeout( function(){
+        var generalMsg = $('.general_msg');
+        generalMsg.slideUp()
+    },5000);
 
 });

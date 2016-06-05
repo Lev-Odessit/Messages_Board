@@ -37,5 +37,6 @@
 				<div class="all_rights">Доска объявлений 2016. All rights reserved.</div>
 			</div>
 		</footer>
+        <script src="<?=TEMPLATE;?>scripts/lightbox.js"></script>
 </body>
-</html> 
+</html>

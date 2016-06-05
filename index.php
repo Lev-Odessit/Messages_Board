@@ -30,7 +30,7 @@ if(file_exists(ACTIONS.$action.".php")) {
 }
 
 if ( $action != 'categories' ) {
-    $m_action = "main";
+    $m_action = "section";
 }
 else {
     $m_action = $action;

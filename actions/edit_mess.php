@@ -15,12 +15,12 @@ else {
                 $msg = edit_mess($_POST,$user['user_id']);
 
                 if ( $msg === TRUE) {
-                    $_SESSION['msg'] = "Успешно измененно. Ожидает проверки модератора.";
-
+                    $msg = "Успешно измененно. Ожидает проверки модератора.";
+                    $_SESSION['msg'] = '<div class="green">'.$msg.'</div>';;
                     header("Location:?action=p_mess");
                 } 
                 else {
-                    $_SESSION['msg'] = $msg;
+                    $_SESSION['msg'] = '<div class="red">'.$msg.'</div>';;
                     header("Location:?action=edit_mess&id=".$id_mess);
                 }
                 exit();

@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/960.css">
     <!-- Font Awesome Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/font-awesome.css">
+    <!--  Gallery Styles  -->
+    <link href="<?=TEMPLATE;?>css/lightbox.css" rel="stylesheet">
     <!-- Slick Slyder Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>slick/slick-theme.css">

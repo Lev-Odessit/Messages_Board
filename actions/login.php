@@ -6,11 +6,11 @@ if ( isset($_POST['login']) && isset($_POST['password']) ) {
 
     if( $msg === TRUE ) {
         $msg = 'Вы успешно залогинились';
-        $_SESSION['msg'] = '<div class="alert alert-success" role="alert">'.$msg.'</div>';
+        $_SESSION['msg'] = '<div class="green">'.$msg.'</div>';
         header("Location:".$_SERVER['PHP_SELF']);
     }
     else {
-        $_SESSION['msg'] = '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
+        $_SESSION['msg'] = '<div class="red">'.$msg.'</div>';
         header("Location:?action=login");
     }
 
@@ -21,7 +21,7 @@ if ( isset($_GET['logout']) ) {
     $msg = logout();
 
     if ( $msg === TRUE ) {
-        $_SESSION['msg'] = '<div class="alert alert-success" role="alert">Вы вышли из системы</div>';
+        $_SESSION['msg'] = '<div class="green">Вы вышли из системы</div>';
         header("Location:".$_SERVER['PHP_SELF']);
         exit();
     }

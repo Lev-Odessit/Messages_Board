@@ -1,13 +1,9 @@
 <div class="container_12">
-    <h3 class="title_page">Категория - <?= $cat_name; ?></h3>
+    <h3 class="title_page">Объявления</h3>
     <?php if ( $name_razd ) : ?>
         <strong>Раздел: </strong><?= $name_razd; ?>
     <?php endif; ?>
-    <? if($_SESSION['msg']) : ?>
-        <?= $_SESSION['msg']; ?>
-        <?php unset($_SESSION['msg']);?>
-    <? endif; ?>
-    <?php if ($text) : ?>
+    <?php if (!is_string($text) && !is_bool($text)) : ?>
         <?php foreach ( $text as $item ) : ?>
             <ul class="categories_mess">
                 <li class="cat_mess_img">
@@ -35,47 +31,57 @@
             <ul class="pager">
                 <?php if ( $navigation['first'] ) : ?>
                     <li class="first">
-                        <a href="?action=categories&page=1&id_cat=<?= $id_cat; ?><?= $id_r; ?>">Первая</a>
+                        <a href="?<?= $url; ?>page=1">Первая</a>
                     </li>
                 <?php endif; ?>
+
                 <?php if ( $navigation['last_page'] ) : ?>
                     <li>
-                        <a href="?action=categories&page=<?= $navigation['last_page']; ?>&id_cat=<?= $id_cat; ?><?= $id_r; ?>">&lt;</a>
+                        <a href="?<?= $url; ?>page=<?= $navigation['last_page'] ?>">&lt;</a>
                     </li>
                 <?php endif; ?>
+
                 <?php if ($navigation['previous']) : ?>
                     <?php foreach ($navigation['previous'] as $val) : ?>
                         <li>
-                            <a href="?action=categories&page=<?= $val; ?>&id_cat=<?= $id_cat; ?><?= $id_r; ?>"><?= $val; ?></a>
+                            <a href="?<?= $url; ?>page=<?= $val; ?>"><?= $val; ?></a>
                         </li>
                     <?php endforeach; ?>
                 <?php endif; ?>
+
                 <?php if ( $navigation['current'] ) : ?>
                     <li>
                         <span><?= $navigation['current']; ?></span>
                     </li>
                 <?php endif; ?>
+
                 <?php if ( $navigation['next'] ) : ?>
                     <?php foreach ( $navigation['next'] as $v ) : ?>
                         <li>
-                            <a href="?action=categories&page=<?= $v; ?>&id_cat=<?= $id_cat; ?><?= $id_r; ?>"><?= $v; ?></a>
+                            <a href="?<?= $url; ?>page=<?= $v; ?>"><?= $v; ?></a>
                         </li>
                     <?php endforeach; ?>
                 <?php endif; ?>
+
                 <?php if ( $navigation['next_pages'] ) : ?>
                     <li>
-                        <a href="?action=categories&page=<?= $navigation['next_pages']; ?>&id_cat=<?= $id_cat; ?><?= $id_r; ?>">&gt;</a>
+                        <a href="?<?= $url; ?>page=<?= $navigation['next_pages']; ?>">&gt;</a>
                     </li>
                 <?php endif; ?>
+
                 <?php if ( $navigation['end'] ) : ?>
                     <li class="last">
-                        <a href="?action=categories&page=<?= $navigation['end']; ?>&id_cat=<?= $id_cat; ?><?= $id_r; ?>">Последняя</a>
+                        <a href="?<?= $url; ?>page=<?= $navigation['end']; ?>">Последняя</a>
                     </li>
                 <?php endif; ?>
             </ul>
         <?php endif; ?>
     <?php else : ?>
-        <div class="grid_12 ntngs_to_display">Объявлений нет</div>
+        <div class="container_12 ntngs_to_display">
+            <? if($_SESSION['msg']) : ?>
+                <?= $_SESSION['msg']; ?>
+                <?php unset($_SESSION['msg']);?>
+            <? endif; ?>
+        </div>
     <?php endif; ?>
 </div>
-

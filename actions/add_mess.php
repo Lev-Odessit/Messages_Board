@@ -7,12 +7,12 @@ else {
     if ( $_POST ) {
         $msg = add_mess($_POST,$user['user_id']);
         if ( $msg === TRUE ) {
-            $_SESSION['msg'] = "Успешно добавлено. Ожидает проверки модератора";
+            $msg = "Успешно добавлено. Ожидает проверки модератора";
+            $_SESSION['msg'] = '<div class="green">'.$msg.'</div>';
         }
         else {
-            $_SESSION['msg'] = '<div class="alert alert-danger" role="alert">'.$msg.'</div>';;
+            $_SESSION['msg'] = '<div class="red">'.$msg.'</div>';
         }
-
         header("Location:?action=add_mess");
         exit();
     }
