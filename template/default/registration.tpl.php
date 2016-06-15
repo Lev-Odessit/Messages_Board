@@ -1,6 +1,11 @@
-<?= $_SESSION['msg']; ?>
-<? unset($_SESSION['msg']); ?>
-
+<div class="container_12">
+    <?php if($_SESSION['msg']) : ?>
+        <div class="general_msg">
+            <?= $_SESSION['msg']; ?>
+            <?php unset($_SESSION['msg']);?>
+        </div>
+    <?php endif; ?>
+</div>
 <div class="registration_block container_12">
     <h1 class="">Регистрация</h1>
     <form METHOD="post">

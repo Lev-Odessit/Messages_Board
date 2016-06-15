@@ -1,6 +1,11 @@
-<?= $_SESSION['msg']; ?>
-<?php unset($_SESSION['msg']); ?>
-
+<div class="container_12">
+    <?php if($_SESSION['msg']) : ?>
+        <div class="general_msg">
+            <?= $_SESSION['msg']; ?>
+            <?php unset($_SESSION['msg']);?>
+        </div>
+    <?php endif; ?>
+</div>
 <div class="login_block container_12">
     <h1>Авторизируйтесь</h1>
 

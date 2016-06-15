@@ -69,17 +69,18 @@ header .bottom .add_post {
 	margin: 15px 0 0 0;
 	font-size: 12px;
 }
-.nav {
+nav > ul {
 	margin: -10px auto 0;
 	text-align: left;
 	background: white;
 	border:1px solid #ccc;
+    height: 47px;
 }
-.nav > li {
+nav > ul > li {
 	float: left;
 	display: inline-block;
 }
-.nav > li > a {
+nav > ul > li > a {
 	padding: 15px;
 	text-decoration: none;
 	color: black;
@@ -87,21 +88,21 @@ header .bottom .add_post {
 	display: inline-block;
 	position: relative;
 }
-.nav > li:hover {
+nav > ul > li:hover {
 	background: #cf2f31;
 	color: white;
 }
-.nav > li:hover a {
+nav > ul > li:hover a {
     color: white;
 }
-.nav > li:hover a.nav_categories::after {
+nav > ul > li:hover a.nav_categories::after {
     border-top: 8px solid white;
 }
-.nav > li > a.nav_categories {
+nav > ul > li > a.nav_categories {
 	padding: 15px 52px 15px 15px;
 	position: relative;
 }
-.nav > li > a.nav_categories::after {
+nav > ul > li > a.nav_categories::after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -111,10 +112,10 @@ header .bottom .add_post {
 	border: 4px solid transparent;
 	border-top: 8px solid black;
 }
-.nav > li.sub_menu_link	{
+nav > ul > li.sub_menu_link	{
 	position: relative;
 }
-.nav > li.sub_menu_link .sub_menu	{
+nav > ul > li.sub_menu_link .sub_menu	{
 	display: none;
 	position: absolute;
 	top: 48px;
@@ -126,17 +127,17 @@ header .bottom .add_post {
 	padding: 1px;
 	z-index: 3;
 }
-.nav > li.sub_menu_link .sub_menu a {
+nav > ul > li.sub_menu_link .sub_menu a {
 	text-decoration: none;
 	padding:4px;
 	display: inline-block;
 	color: white;
 	font-weight: bold;
 }
-.nav > li.sub_menu_link .sub_menu a:hover {
+nav > ul > li.sub_menu_link .sub_menu a:hover {
 	text-decoration: underline;
 }
-.nav > li.sub_menu_link:hover .sub_menu {
+nav > ul > li.sub_menu_link:hover .sub_menu {
 	display: block;
 }
 .general_msg {

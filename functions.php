@@ -81,16 +81,14 @@
             else {
                 $headers = '';
                 $headers = "From: Admin admin@mail.ru";
-                $headers = "Content-Type:text/html; charset=UTF-8";
+                $headers = "Content-Type:text/plain; charset=utf8";
 
                 $tema = "registration";
-
-                $mailStr = file_get_contents('mailString.html');
 
                 $mail_body = "Спасибо за регистрацию на сайте.
                     Ваша ссылка для подтверждения учётной записи: ".SITE_NAME."?action=registration&hash=".$hash;
 
-                mail($email,$tema,$mailStr,$headers);
+                mail($email,$tema,$mail_body,$headers);
 
                 return TRUE;
 
@@ -491,11 +489,6 @@
         return $str_g;
     }
 
-/**
- * @param $post
- * @param $user_id
- * @return bool|string
- */
 function add_mess($post, $user_id) {
         $connect = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die(mysqli_error($connect));
         mysqli_select_db($connect,DB_NAME);
@@ -1654,7 +1647,6 @@ function add_mess($post, $user_id) {
 
         return $row[0];
     }
-
 
     function get_child($id) {
     	$connect = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die(mysqli_error($connect));

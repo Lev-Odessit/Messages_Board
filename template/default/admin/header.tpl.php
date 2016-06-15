@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/normalize.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Old Custom Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/oldcustom.css">
     <!-- Custom stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?=TEMPLATE;?>css/custom.css">
     <!-- Latest compiled and minified JQuery -->

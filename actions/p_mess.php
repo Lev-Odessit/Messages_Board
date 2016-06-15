@@ -34,10 +34,11 @@ else {
             $msg = delete_mess($id_mess);
 
             if ( $msg === TRUE) {
-                $_SESSION['msg'] = "Удалено";
+                $msg = "Удалено";
+                $_SESSION['msg'] = '<div class="green">'.$msg.'</div>';
             }
             else {
-                $_SESSION['msg'] = $msg;
+                $_SESSION['msg'] = '<div class="red">'.$msg.'</div>';
             }
 
             header("Location:?action=p_mess");

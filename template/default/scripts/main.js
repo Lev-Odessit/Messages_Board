@@ -1,5 +1,5 @@
 $(function(){
-
+    
     // Carousel script
     var nextPostBtn = $('.next'),
         prevPostBtn = $('.prev');
